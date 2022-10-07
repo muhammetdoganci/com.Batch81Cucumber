@@ -9,14 +9,28 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepDefinitions", //stepDefinitions class'inin yolunu aldip buraya attik
-                                 // isminede glue(yapistirici) dedik
-        tags = "@gp1",          // Runner class'ndan hangisini calistirmak istersek buraya
-        dryRun = false          // eksik olan adimlari olusturmasi icin
+                                  // isminede glue(yapistirici) dedik
+        tags = "@Background",            // Runner class'ndan hangisini calistirmak istersek buraya
+                                  // birden fazla grup çalıstıracaksak "@gp3 or @gp1" yazarız
+        dryRun = false            // eksik olan adimlari olusturmasi icin
 )
 
 public class Runner {
     /*
-    runner class'ı TestNg'deki XML mantıgı ile calısır.
+     Runner Class'ı TestNG'deki XMl mantığı ile çalışır. Çalıştırmak istediğimiz senartolara tag belirtiriz
+    ve belirttiğimiz tag'ları çalıştırır. XMl deki gibi istediğimiz testleri çalıştırmak için kullanırız.
+    Runner class body'si boştur ve runner class'ını ekleyeceğimiz notasyonlar aktive eder.
+     Bu class'da kullanacağımız 2 adet notasyon vardır
+    -@RunWith(Cucumber.class)  notasyonu Runner class'ına çalışma özelliği ekler.
+    Bu notasyon olduğu için Cucumber frameworkumuzde Junit kullanmayı tercih ederiz
+    -@CucumberOptions notasyonu içinde
+    features : Runeer dosyasının feature dosyasını nereden bulacağını tarif eder
+    glue : stepDefinitions yolunu belirtiriz
+    tags : Hangi tag'i çalıştırmak istiyorsak onu belli eder
+
+    dryRun : iki seçenek vardır
+    dryRun = true; dersek testimizi çalıştırmadan eksik adımları bize verir
+    dryRun = false; testlerimizi driver ile çalıştırır.
      */
 
 }
