@@ -33,6 +33,6 @@ public class BlueRentACarStepDefinition {
 
     @Then("sayfaya giris yapilamadigini kontrol eder")
     public void sayfayaGirisYapilamadiginiKontrolEder() {
-        Assert.assertFalse(blueRentACarPage.basariliGirisDonut.isDisplayed());
+        Assert.assertTrue(blueRentACarPage.signIn.isDisplayed());
     }
 }
