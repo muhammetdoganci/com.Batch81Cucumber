@@ -1,5 +1,7 @@
 Feature: US002 Parametre Kullanimi
 
+
+
   Background: ortak adimlar
     Given kullanici amazon sayfasina gider
 

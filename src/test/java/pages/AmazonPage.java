@@ -8,6 +8,7 @@ public class AmazonPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+
     @FindBy(id = "twotabsearchtextbox")
     public WebElement aramaKutusu;
     @FindBy(xpath = "//div[@class='a-section a-spacing-small a-spacing-top-small']")

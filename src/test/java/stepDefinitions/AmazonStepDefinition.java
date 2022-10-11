@@ -84,4 +84,14 @@ public class AmazonStepDefinition {
             throw new RuntimeException(e);
         }
     }
+
+    @Then("kullanici {string} icin arama yapar")
+    public void kullaniciIcinAramaYapar(String istenenKelime) {
+        amazonObje.aramaKutusu.sendKeys(istenenKelime, Keys.ENTER);
+    }
+
+    @And("kullanici sonuclarin {string} icerdigini test eder")
+    public void kullaniciSonuclarinIcerdiginiTestEder(String istenenKelime) {
+        Assert.assertTrue(amazonObje.aramaSonucu.getText().contains(istenenKelime));
+    }
 }
