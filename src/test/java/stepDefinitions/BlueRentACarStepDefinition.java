@@ -25,6 +25,7 @@ public class BlueRentACarStepDefinition {
         blueRentACarPage.password.sendKeys(ConfigReader.getProperty("bracWrongPassword"));
     }
 
+
     @And("Login butonuna basar")
     public void loginButonunaBasar() {
         blueRentACarPage.signIn.click();

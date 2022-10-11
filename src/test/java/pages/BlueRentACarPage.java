@@ -11,6 +11,7 @@ public class BlueRentACarPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+
     @FindBy(xpath = "//*[@class='btn btn-primary btn-sm']")
     public WebElement login;
 
