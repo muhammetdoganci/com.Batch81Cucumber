@@ -2,6 +2,7 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -67,7 +68,7 @@ public class AmazonStepDefinition {
 
     @Given("kullanici {string} sayfasina gider")
     public void kullaniciSayfasinaGider(String istenenSayfa) {
-        Driver.getDriver().get(ConfigReader.getProperty(istenenSayfa));
+        Driver.getDriver().get(istenenSayfa);
     }
 
     @Then("url'in {string} icerdigini test eder")
@@ -93,5 +94,15 @@ public class AmazonStepDefinition {
     @And("kullanici sonuclarin {string} icerdigini test eder")
     public void kullaniciSonuclarinIcerdiginiTestEder(String istenenKelime) {
         Assert.assertTrue(amazonObje.aramaSonucu.getText().contains(istenenKelime));
+    }
+
+    @Given("kullanici {string} sayfasinda")
+    public void kullaniciSayfasinda(String istenenUrl) {
+        Driver.getDriver().get(ConfigReader.getProperty(istenenUrl));
+    }
+
+    @When("sayfanın url'inin {string} icerdigini test eder")
+    public void sayfanınUrlIninIcerdiginiTestEder(String arananKelime) {
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(arananKelime));
     }
 }
