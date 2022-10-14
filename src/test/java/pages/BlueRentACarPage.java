@@ -22,7 +22,7 @@ public class BlueRentACarPage {
     public WebElement password;
 
     @FindBy(xpath = "//*[@class='btn btn-primary']")
-    public WebElement signIn;
+    public WebElement ikinciLogin;
 
     @FindBy(xpath = "//*[text()='John Walker']")
     public WebElement basariliGirisDonut;
