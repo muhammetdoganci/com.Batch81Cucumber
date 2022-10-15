@@ -1,5 +1,6 @@
 Feature: US004 Parametre Kullanimi
 
+  @gp2
   Scenario: TC01 Parametre Kullanimi
     Given kullanici "https://www.trendyol.com" sayfasina gider
     And sayfada 1 saniye bekler
